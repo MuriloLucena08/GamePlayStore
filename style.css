@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@media (max-width:600px) {
+    :root {
+        font-size: 10px;
+    }
+}
