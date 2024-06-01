@@ -20,8 +20,8 @@
   />
 </head>
 <body class="bg-stone-200 flex flex-col h-screen">
-    <header class="flex text-xl bg-lime-600 h-16 px-8 py-4 shadow-xl shadow-lime-100 justify-between sticky top-0 z-10">
-      <div class="lg:flex text-slate-200 md:flex text-slate-200 sm:flex text-slate-200">
+    <header class="lg:flex text-xl bg-lime-600 h-16 px-8 py-4 shadow-xl shadow-lime-100 justify-between sticky top-0 z-10 md:flex text-xl bg-lime-600 h-16 px-8 py-4 shadow-xl shadow-lime-100 justify-between sticky top-0 z-10 sm:flex text-xl bg-lime-600 h-16 px-8 py-4 shadow-xl shadow-lime-100 justify-between sticky top-0 z-10">
+      <div class="flex text-slate-200">
         <a href="./">
           <img 
             class="h-8"
@@ -88,19 +88,19 @@
             <input 
               type="text" 
               id="codigo-seguranca" 
-              class="rounded-sm px-2 border-2 border-slate-200 py-1" 
+              class="lg:rounded-sm px-2 border-2 border-slate-200 py-1 md:rounded-sm px-2 border-2 border-slate-200 py-1 sm:rounded-sm px-2 border-2 border-slate-200 py-1" 
               placeholder="222"
               required
             >
           </div>
           <div class="lg:flex flex-col px-10 py-10 py-3 w-1/2 md:flex flex-col px-10 py-10 py-3 w-1/2 sm:flex flex-col px-10 py-10 py-3 w-1/2">
-            <label for="data-expiracao" class="font-bold text-sm mb-2">
+            <label for="data-expiracao" class="lg:font-bold text-sm mb-2 md:font-bold text-sm mb-2 sm:font-bold text-sm mb-2">
               Data de Validade 
             </label>
             <input 
               type="datetime" 
               id="data-expiracao" 
-              class="rounded-sm px-2 border-2 border-slate-200 py-1" 
+              class="lg:rounded-sm px-2 border-2 border-slate-200 py-1 md:rounded-sm px-2 border-2 border-slate-200 py-1 sm:rounded-sm px-2 border-2 border-slate-200 py-1" 
               placeholder="10/2025"
               required
             >
