@@ -19,7 +19,7 @@
     referrerpolicy="no-referrer" 
   />
 </head>
-<body class="bg-stone-200 flex flex-col h-screen">
+<body class="sm:bg-stone-200 flex flex-col h-screen md:bg-stone-200 flex flex-col h-screen lg:bg-stone-200 flex flex-col h-screen">
     <header class="flex text-xl bg-lime-600 h-16 px-8 py-4 shadow-xl shadow-lime-100 justify-between sticky top-0 z-10">
       <div class="flex text-slate-200">
         <a href="./">
@@ -33,7 +33,7 @@
       </div>
     </header>
     <form class="flex w-100 px-5 gap-4 py-10 grow">
-      <section id="dados-usuario" class="md:w-1/3 bg-white rounded-lg py-5">
+      <section id="dados-usuario" class="sm:w-1/3 bg-white rounded-lg py-5 md:w-1/3 bg-white rounded-lg py-5 lg:w-1/3 bg-white rounded-lg py-5">
         <p class="mb-5 text-center font-bold">Seus Dados</p>
         <div class="flex flex-col px-10 py-3">
           <label for="nome" class="font-bold text-sm mb-2">Nome</label>
@@ -66,7 +66,7 @@
           >
         </div>
       </section>
-      <section id="pagamento-entrega" class="md:w-1/3 bg-white rounded-lg py-5">
+      <section id="pagamento-entrega" class="sm:w-1/3 bg-white rounded-lg py-5 md:w-1/3 bg-white rounded-lg py-5 lg:w-1/3 bg-white rounded-lg py-5">
         <p class="mb-5 text-center font-bold">Pagamento e Entrega</p>
         <div class="flex flex-col px-10 py-3">
           <label for="numero-cartao" class="font-bold text-sm mb-2">
@@ -80,8 +80,8 @@
             required
           >
         </div>
-        <div class="sm:flex">
-          <div class="sm:flex flex-col px-10 py-3 w-1/2">
+        <div class="sm:flex md:flex lg:flex">
+          <div class="sm:flex flex-col px-10 py-3 w-1/2 md:flex flex-col px-10 py-3 w-1/2 lg:flex flex-col px-10 py-3 w-1/2">
             <label for="codigo-seguranca" class="font-bold text-sm mb-2">
               CVV
             </label>
@@ -93,7 +93,7 @@
               required
             >
           </div>
-          <div class="sm:flex flex-col px-10 py-10 py-3 w-1/2">
+          <div class="sm:flex flex-col px-10 py-10 py-3 w-1/2 md:flex flex-col px-10 py-10 py-3 w-1/2 lg:flex flex-col px-10 py-10 py-3 w-1/2">
             <label for="data-expiracao" class="font-bold text-sm mb-2">
               Data de Validade 
             </label>
@@ -130,8 +130,8 @@
             required
           >
         </div>
-        <div class="sm:flex">
-          <div class="sm:flex flex-col px-10 py-3 w-1/2">
+        <div class="sm:flex md:flex lg:flex">
+          <div class="sm:flex flex-col px-10 py-3 w-1/2 md:flex flex-col px-10 py-10 py-3 w-1/2 lg:flex flex-col px-10 py-10 py-3 w-1/2">
             <label for="numero" class="font-bold text-sm mb-2">
               Número
             </label>
@@ -143,7 +143,7 @@
               required
             >
           </div>
-          <div class="sm:flex flex-col px-10 py-3 w-1/2">
+          <div class="sm:flex flex-col px-10 py-3 w-1/2 md:flex flex-col px-10 py-10 py-3 w-1/2 lg:flex flex-col px-10 py-10 py-3 w-1/2">
             <label for="complemento" class="font-bold text-sm mb-2">
               Complemento 
             </label>
@@ -157,8 +157,8 @@
           </div>
         </div>
       </section>
-      <section id="produtos-checkout" class="md:w-1/3 bg-white rounded-lg py-5">
-        <section id="conteiner-produtos-checkout" class="sm:h-4/5 overflow-y-auto px-2 flex flex-col items-center"></section>
+      <section id="produtos-checkout" class="sm:w-1/3 bg-white rounded-lg py-5 md:w-1/3 bg-white rounded-lg py-5 lg:w-1/3 bg-white rounded-lg py-5">
+        <section id="conteiner-produtos-checkout" class="sm:h-4/5 overflow-y-auto px-2 flex flex-col items-center md:h-4/5 overflow-y-auto px-2 flex flex-col items-center lg:h-4/5 overflow-y-auto px-2 flex flex-col items-center"></section>
         <section id="celula-checkout" class="flex flex-col px-2 h-1/5 justify-around">
           <p id="preco-final" class="bg-slate-200 text-green-800 rounded-lg pl-5"></p>
           <button 
