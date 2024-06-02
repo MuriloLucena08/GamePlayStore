@@ -32,30 +32,30 @@
         <span class="h-8 text-slate-200 font-extrabold">GAME PLAY STORE</span>
       </div>
     </header>
-    <form class="flex w-100 px-5 gap-4 py-10 grow sm:w-100 sm:px-5 sm:gap-4 sm:py-10 sm:grow">
-      <section id="dados-usuario" class="w-1/3 bg-white rounded-lg py-5 sm:w-1/3 py-5">
+    <form class="flex w-100 px-5 gap-4 py-10 grow">
+      <section id="dados-usuario" class="w-1/3 bg-white rounded-lg py-5">
         <p class="mb-5 text-center font-bold">Seus Dados</p>
-        <div class="flex flex-col px-10 py-3 sm:px-10 sm:py-3">
+        <div class="flex flex-col px-10 py-3">
           <label for="nome" class="font-bold text-sm mb-2">Nome</label>
           <input 
             type="text" 
             id="nome" 
-            class="rounded-sm px-2 border-2 border-slate-200 py-1 sm:px-2 sm:py-1" 
+            class="rounded-sm px-2 border-2 border-slate-200 py-1" 
             placeholder="Joao da Silva"
             required
           >
         </div>
-        <div class="flex flex-col px-10 py-3 sm:px-10 sm:py-3">
+        <div class="flex flex-col px-10 py-3">
           <label for="email" class="font-bold text-sm mb-2">Email</label>
           <input 
             type="email" 
             id="email" 
-            class="rounded-sm px-2 border-2 border-slate-200 py-1 sm:px-2 sm:py-1" 
+            class="rounded-sm px-2 border-2 border-slate-200 py-1" 
             placeholder="joao.silva@gmail.com"
             required
           >
         </div>
-        <div class="flex flex-col px-10 py-3 sm:px-10 sm:py-3">
+        <div class="flex flex-col px-10 py-3">
           <label for="telefone" class="font-bold text-sm mb-2">Telefone</label>
           <input 
             type="tel" 
@@ -66,100 +66,100 @@
           >
         </div>
       </section>
-      <section id="pagamento-entrega" class="w-1/3 bg-white rounded-lg py-5 sm:w-1/3">
+      <section id="pagamento-entrega" class="w-1/3 bg-white rounded-lg py-5">
         <p class="mb-5 text-center font-bold">Pagamento e Entrega</p>
-        <div class="flex flex-col px-10 py-3 sm:px-10 sm:py-3">
+        <div class="flex flex-col px-10 py-3">
           <label for="numero-cartao" class="font-bold text-sm mb-2">
             Numero do Cartão
           </label>
           <input 
             type="text" 
             id="numero-cartao" 
-            class="rounded-sm px-2 border-2 border-slate-200 py-1 sm:px-2 sm:py-1" 
+            class="rounded-sm px-2 border-2 border-slate-200 py-1" 
             placeholder="1111 1111 1111 1111"
             required
           >
         </div>
         <div class="flex">
-          <div class="flex flex-col px-10 py-3 w-1/2 sm:w-1/2">
+          <div class="flex flex-col px-10 py-3 w-1/2 sm:px-5 py-3 w-1/2">
             <label for="codigo-seguranca" class="font-bold text-sm mb-2">
               CVV
             </label>
             <input 
               type="text" 
               id="codigo-seguranca" 
-              class="rounded-sm px-2 border-2 border-slate-200 py-1 sm:px-2 sm:py-1" 
+              class="rounded-sm px-2 border-2 border-slate-200 py-1" 
               placeholder="222"
               required
             >
           </div>
-          <div class="flex flex-col px-10 py-10 py-3 w-1/2 sm:w-1/2">
+          <div class="flex flex-col px-10 py-10 py-3 w-1/2 sm:px-5 py-3 w-1/2">
             <label for="data-expiracao" class="font-bold text-sm mb-2">
               Data de Validade 
             </label>
             <input 
               type="datetime" 
               id="data-expiracao" 
-              class="rounded-sm px-2 border-2 border-slate-200 py-1 sm:px-2 sm:py-1" 
+              class="rounded-sm px-2 border-2 border-slate-200 py-1" 
               placeholder="10/2025"
               required
             >
           </div>
         </div>
-        <div class="flex flex-col px-10 py-3 sm:px-10 sm:py-3">
+        <div class="flex flex-col px-10 py-3">
           <label for="cep" class="font-bold text-sm mb-2">
             CEP
           </label>
           <input 
             type="text" 
             id="cep" 
-            class="rounded-sm px-2 border-2 border-slate-200 py-1 sm:px-2 sm:py-1" 
+            class="rounded-sm px-2 border-2 border-slate-200 py-1" 
             placeholder="77333-000"
             required
           >
         </div>
-        <div class="flex flex-col px-10 py-3 sm:py-2">
+        <div class="flex flex-col px-10 py-3">
           <label for="endereco" class="font-bold text-sm mb-2">
             Endereço
           </label>
           <input 
             type="text" 
             id="endereco" 
-            class="rounded-sm px-2 border-2 border-slate-200 py-1 sm:px-2 sm:py-1" 
+            class="rounded-sm px-2 border-2 border-slate-200 py-1" 
             placeholder="rua alvejante linhares"
             required
           >
         </div>
         <div class="flex">
-          <div class="flex flex-col px-10 py-3 w-1/2 md:w-1/2">
+          <div class="flex flex-col px-10 py-3 w-1/2 md:px-5 py-3 w-1/2">
             <label for="numero" class="font-bold text-sm mb-2">
               Número
             </label>
             <input 
               type="text" 
               id="numero" 
-              class="rounded-sm px-2 border-2 border-slate-200 py-1 md:px-2 md:py-1" 
+              class="rounded-sm px-2 border-2 border-slate-200 py-1" 
               placeholder="444"
               required
             >
           </div>
-          <div class="flex flex-col px-10 py-3 w-1/2 sm:w-1/2">
+          <div class="flex flex-col px-10 py-3 w-1/2 sm:px-5 py-3 w-1/2">
             <label for="complemento" class="font-bold text-sm mb-2">
               Complemento 
             </label>
             <input 
               type="text" 
               id="complemento" 
-              class="rounded-sm px-2 border-2 border-slate-200 py-1 sm:px-2 sm:py-1" 
+              class="rounded-sm px-2 border-2 border-slate-200 py-1" 
               placeholder="555"
               required
             >
           </div>
         </div>
       </section>
-      <section id="produtos-checkout" class="w-1/3 bg-white rounded-lg py-5 sm:w-1/3 sm:py-5">
-        <section id="conteiner-produtos-checkout" class="h-4/5 overflow-y-auto px-2 flex flex-col items-center sm:h-4/5 sm:px-2"></section>
-        <section id="celula-checkout" class="flex flex-col px-2 h-1/5 justify-around sm:px-2 sm:h-1/5">
+      <section id="produtos-checkout" class="w-1/3 bg-white rounded-lg py-5 sm:w-1/3 py-5">
+        <section id="conteiner-produtos-checkout" class="h-4/5 overflow-y-auto px-2 flex flex-col items-center sm:h-4/5 px-1"></section>
+        <section id="celula-checkout" class="flex flex-col px-2 h-1/5 justify-around sm:px-1 sm:h-1/5">
           <p id="preco-final" class="bg-slate-200 text-green-800 rounded-lg pl-5"></p>
           <button 
             class="bg-slate-900 text-slate-200 p-1 hover:bg-slate-800"
