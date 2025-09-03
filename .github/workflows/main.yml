@@ -1,0 +1,38 @@
+name: Vite Build and Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Pega o código do repositório
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Instala Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      # 3. Instala dependências
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Roda o build do Vite
+      - name: Build project
+        run: npm run build
+
+      # 5. Faz deploy no GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true   # garante que não haverá conflito com branch existente
