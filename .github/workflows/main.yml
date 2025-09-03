@@ -9,26 +9,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Faz o checkout do repositório
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
+      # 2️⃣ Teste do segredo (temporário)
+      - name: Test secret
+        run: echo "Token length: ${#TOKEN_PLAYSTORE}"
+        env:
+          TOKEN_PLAYSTORE: ${{ secrets.token_playStore }}
+
+      # 3️⃣ Configura Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
+      # 4️⃣ Instala dependências do projeto
       - name: Install dependencies
         run: npm install
 
+      # 5️⃣ Roda o build do Vite
       - name: Build project
         run: npm run build
 
+      # 6️⃣ Faz deploy no GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.token-playStore }}  # <-- Use seu token
+          personal_token: ${{ secrets.token_playStore }}
           publish_dir: ./dist
           force_orphan: true
           commit_message: "Deploy via GitHub Actions"
