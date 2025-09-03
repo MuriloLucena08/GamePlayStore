@@ -9,26 +9,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout do repositório
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
+      # 2️⃣ Configura Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
+      # 3️⃣ Instala dependências
       - name: Install dependencies
         run: npm install
 
+      # 4️⃣ Build do Vite
       - name: Build project
         run: npm run build
 
+      # 5️⃣ Deploy no GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GH_PAT }}
+          personal_token: ${{ secrets.token-playStore }}  # <-- CORRETO, com hífen
           publish_dir: ./dist
           force_orphan: true
           commit_message: "Deploy via GitHub Actions"
