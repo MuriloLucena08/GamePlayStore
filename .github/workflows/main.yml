@@ -1,9 +1,8 @@
 name: Vite Build and Deploy
 
+# Dispara sempre que houver push no main
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: [ "main" ]
 
 jobs:
@@ -11,29 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Pega o código do repositório
+      # 1️⃣ Faz o checkout do repositório
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # MUITO IMPORTANTE: baixa todo o histórico, necessário para push no gh-pages
 
-      # 2. Instala Node.js
+      # 2️⃣ Configura Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
-      # 3. Instala dependências
+      # 3️⃣ Instala dependências do projeto
       - name: Install dependencies
         run: npm install
 
-      # 4. Roda o build do Vite
+      # 4️⃣ Roda o build do Vite
       - name: Build project
         run: npm run build
 
-      # 5. Faz deploy no GitHub Pages
+      # 5️⃣ Faz deploy no GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-              github_token: ${{ secrets.GITHUB_TOKEN }}
-              publish_dir: ./dist
-              force_orphan: true       # cria branch do zero
-              commit_message: "Deploy via GitHub Actions"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist   # Pasta gerada pelo Vite
+          force_orphan: true    # Cria o branch gh-pages do zero, evita conflitos
+          commit_message: "Deploy via GitHub Actions"
