@@ -33,6 +33,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          force_orphan: true   # garante que não haverá conflito com branch existente
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              publish_dir: ./dist
+              force_orphan: true       # cria branch do zero
+              commit_message: "Deploy via GitHub Actions"
