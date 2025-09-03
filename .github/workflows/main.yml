@@ -28,7 +28,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.token_playStore }}  # <-- Use seu token
+          personal_token: ${{ secrets.token-playStore }}  # <-- Use seu token
           publish_dir: ./dist
           force_orphan: true
           commit_message: "Deploy via GitHub Actions"
